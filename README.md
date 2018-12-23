@@ -78,15 +78,14 @@
 |price|integer|null: false|
 |description|text|-------|
 |condition|string|null: false|
-|shipping_from|string|null: false|
+|size|string|-------|
 |shipping_date|integer|null: false|
 |shipping_fee|integer|null: false|
 |shipping_way|string|null: false|
-|size|string|null: false|
+|shipping_from|string|null: false|
 |user_id|references|null: false, foreign_key: true|
 |brand_id|references|null: false, foreign_key: true|
 |bottom_category_id|references|null: false, foreign_key: true|
-|buyer_id|integer|-------|
 
 ### Association
 - has_many :images
@@ -119,7 +118,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|top_categories_id|references|null: false,foreign_key: true|
+|top_category_id|references|null: false,foreign_key: true|
 
 ### Association
 - has_many :bottoms_categories

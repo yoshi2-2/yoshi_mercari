@@ -1,0 +1,2 @@
+class MidCategorie < ApplicationRecord
+end
