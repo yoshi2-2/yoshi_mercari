@@ -1,0 +1,72 @@
+%header.header
+  .header-inner
+    .header-inner--top
+      %h1.logo
+        = link_to root_path do
+          = image_tag("logo.svg", width: "90", alt: "mercari")
+      .search-bar
+        %form.header-form{action: ""}
+          %input.header-search{:name => "keyword", :placeholder => "何をお探しですか？", :type => "search"}
+          %i.fa.fa-search
+    .header-nav__box
+      %ul.header-nav
+        %li
+          %h2
+            = link_to 'カテゴリーから探す' ,"#"
+          %ul.header-nav-parent-wrap
+            %li.header-nav-parent
+              = link_to 'レディース' ,"#"
+              %ul.header-nav-child-wrap
+                %li.header-nav-child
+                  = link_to 'トップス' ,"#"
+                  %ul.header-nav-grand-child-wrap
+                    %li.header-nav-grand-child
+                      = link_to 'Tシャツ/カットソー(半袖/袖なし)' ,"#"
+            %li.header-nav-parent
+              = link_to 'メンズ' ,"#"
+            %li.header-nav-parent
+              = link_to 'ベビー・キッズ' ,"#"
+            %li.header-nav-parent
+              = link_to 'インテリア・住まい' ,"#"
+            %li.header-nav-parent
+              = link_to '本・音楽・ゲーム' ,"#"
+            %li.header-nav-parent
+              = link_to 'おもちゃ・ホビー' ,"#"
+            %li.header-nav-parent
+              = link_to 'コスメ・香水・美容' ,"#"
+            %li.header-nav-parent
+              = link_to '家電・スマホ・カメラ' ,"#"
+            %li.header-nav-parent
+              = link_to 'スポーツ・レジャー' ,"#"
+            %li.header-nav-parent
+              = link_to 'ハンドメイド' ,"#"
+            %li.header-nav-parent
+              = link_to 'チケット' ,"#"
+            %li.header-nav-parent
+              = link_to '自転車・オートバイ' ,"#"
+            %li.header-nav-parent
+              = link_to 'その他' ,"#"
+            %li.header-nav-parent
+              = link_to 'カテゴリー一覧' ,"#"
+        %li
+          %h2
+            = link_to 'ブランドから探す' ,"#"
+          %ul.header-nav-parent-wrap
+            %li.header-nav-parent
+              = link_to 'シャネル' ,"#"
+            %li.header-nav-parent
+              = link_to 'ナイキ' ,"#"
+            %li.header-nav-parent
+              = link_to 'ルイヴィトン' ,"#"
+            %li.header-nav-parent
+              = link_to 'シュプリーム' ,"#"
+            %li.header-nav-parent
+              = link_to 'アディダス' ,"#"
+            %li.header-nav-parent
+              = link_to 'ブランド一覧' ,"#"
+    .header-right__box
+      %ul.header-right__list
+        %li
+          = link_to 'ログイン', new_user_session_path, class: "header__btn--red"
+        %li
+          = link_to '新規登録' , new_user_registration_path , class: "header__btn--white"
