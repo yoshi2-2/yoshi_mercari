@@ -1,0 +1,63 @@
+$pc: 1024px; // PC
+$tab: 680px; // タブレット
+$sp: 480px;  // スマホ
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+a:link { color: #0099E8; text-decoration: none;}
+a:visited { color: #0099E8;}
+a:hover { color: #0099E8; text-decoration: underline;}
+a:active { color: #0099E8; }
+
+.main{
+  background-color: #F5F5F5;
+}
+
+.pickup-container{
+  width: 80vw;
+  margin: 0 auto;
+  .pickup-head{
+    text-align: center;
+    margin: 20px;
+    font-size: 1.8em;
+    font-weight: bold;
+  }
+  .items-box-container{
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+    h3{
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.items-box-content{
+  text-align: center;
+  display: flex;
+  .items-box{
+    padding: 0 10px;
+    background-color: #fff;
+    img {
+    width: 100%;
+    height: auto;
+    }
+    .items-box-name{
+      text-align: left;
+    }
+  }
+}
