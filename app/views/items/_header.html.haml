@@ -8,7 +8,7 @@
         %form.header-form{action: ""}
           %input.header-search{:name => "keyword", :placeholder => "何をお探しですか？", :type => "search"}
           %i.fa.fa-search
-    .header-nav__box
+    .header-nav__box.clearfix
       %ul.header-nav
         %li
           %h2
@@ -64,9 +64,16 @@
               = link_to 'アディダス' ,"#"
             %li.header-nav-parent
               = link_to 'ブランド一覧' ,"#"
-    .header-right__box
-      %ul.header-right__list
-        %li
-          = link_to 'ログイン', new_user_session_path, class: "header__btn--red"
-        %li
-          = link_to '新規登録' , new_user_registration_path , class: "header__btn--white"
+        %ul.header-right__list
+          - if user_signed_in?
+            %li
+              = link_to 'マイページ', "#", class: "header__btn--red"
+            %li
+              = link_to 'お知らせ' , "#", class: "header__btn--white"
+            %li
+              = link_to 'やることリスト', "#", class: "header__btn--white"
+          - else
+            %li
+              = link_to 'ログイン', new_user_session_path, class: "header__btn--red"
+            %li
+              = link_to '新規登録' , new_user_registration_path , class: "header__btn--white"

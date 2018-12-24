@@ -1,0 +1,133 @@
+$pc: 1024px; // PC
+$tab: 680px; // タブレット
+$sp: 480px;  // スマホ
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+.clearfix {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+.header{
+  width: 80vw;
+  margin: 0 auto;
+  @include tab {margin-left: 10%;};
+  @include sp {margin-left: 0;};
+}
+
+.header-inner--top{
+  display: flex;
+  justify-content: center;
+}
+
+.logo{
+  width: 100px;
+  float: left;
+}
+
+.header-search{
+  float: left;
+  width: 400px;
+  @include tab {width: 300px;};
+  @include sp {width: 100vw;};
+}
+
+.header-nav{
+  display: flex;
+  justify-content: left;
+  h2{
+    width: 50%;
+    float: left;
+    white-space: nowrap;
+    margin: 0 20px;
+    @include tab {margin: 0 10px;};
+    @include sp {margin: 0;};
+  }
+  :hover .header-nav-parent-wrap{
+    @include tab {display: none;};
+    @include sp {display: none;};
+    display: block;
+    position: absolute;
+    top: 50px;
+    z-index: 997;
+    background-color: white;
+    line-height: 30px;
+    padding: 20px;
+    width: 200px;
+  }
+  .header-nav-parent:hover{
+    background-color: red;
+    .header-nav-child{
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 200px;
+      z-index: 998;
+      background-color: white;
+      line-height: 30px;
+      padding: 20px;
+      width: 200px;
+    }
+  }
+  .header-nav-child:hover{
+    background-color: red;
+    .header-nav-grand-child{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 200px;
+    z-index: 999;
+    background-color: white;
+    line-height: 30px;
+    padding: 20px;
+    width: 200px;
+    }
+  }
+  .header-nav-parent-wrap{
+    display: none;
+  }
+  .header-nav-child{
+    display: none;
+  }
+  .header-nav-grand-child{
+    display: none;
+  }
+}
+
+
+.header-right__list{
+  position: absolute;
+  right: 0;
+  @include tab {margin: 3em 10px 0;};
+  @include sp {margin: 3em 0 0;};
+  li{
+    float: right;
+    white-space: nowrap;
+    margin: 0 10px;
+  }
+}
+
+.swiper-container{
+  height: 290px;
+  .top-swiper__image{
+    height: 100%;
+  }
+}
+

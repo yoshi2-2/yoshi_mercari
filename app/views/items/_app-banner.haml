@@ -1,0 +1,19 @@
+%aside.app-banner
+  .app-banner
+    .app-banner-inner
+      %h2 スマホでかんたんフリマアプリ
+      %p 今すぐ無料ダウンロード！
+      .app-banner-
+        %figure
+          = link_to root_path, method: :get do
+            = image_tag "mercari_icon.png", class: "footer-app-icon"
+        %ul.clearfix
+          %li
+            = link_to root_path, method: :get do
+              = image_tag "applestore.png", class: "footer-app-btn"
+          %li
+            = link_to root_path, method: :get do
+              = image_tag "googleplay.png", class: "footer-app-btn"
+    %figure
+      = image_tag "download_content_pc.png", class: "footer-right__img"
+

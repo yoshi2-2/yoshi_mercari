@@ -1,1 +1,36 @@
+%head
+  %script{ src: "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"}
+  %link{ rel:"stylesheet",href:"https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css" }
+%body
+  %script{ src:"https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js" }
+
 =render partial: 'header'
+.main
+  .swiper-container
+    .swiper-wrapper
+      .swiper-slide
+        = link_to root_path do
+          = image_tag "header1.png", class: "top-swiper__image"
+      .swiper-slide
+        = link_to root_path do
+          = image_tag "header2.png", class: "top-swiper__image"
+      .swiper-slide
+        = link_to root_path do
+          = image_tag "header3.png", class: "top-swiper__image"
+    .swiper-pagination
+    .swiper-button-prev
+    .swiper-button-next
+
+  .pickup-container
+    %h2.pickup-head ピックアップカテゴリー
+    .items-box-container
+      = render partial: "pickup-category"
+
+  .pickup-container
+    %h2.pickup-head ピックアップブランド
+    .items-box-container
+      = render partial: "pickup-brand"
+
+= render partial: "app-banner"
+= render partial: "footer"
+= render partial: "footer-sell-btn"
