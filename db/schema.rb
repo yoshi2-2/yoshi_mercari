@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_23_082721) do
+ActiveRecord::Schema.define(version: 2018_12_24_173610) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "postal_code", null: false
@@ -109,6 +109,12 @@ ActiveRecord::Schema.define(version: 2018_12_23_082721) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "nickname", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "users_infos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "family_name", null: false
     t.string "first_name", null: false
     t.string "family_name_kana", null: false
@@ -117,11 +123,10 @@ ActiveRecord::Schema.define(version: 2018_12_23_082721) do
     t.integer "birth_month"
     t.integer "birth_day"
     t.integer "phone_number"
-    t.string "nickname", null: false
     t.string "avatar"
     t.text "introduction"
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "addresses", "users"
