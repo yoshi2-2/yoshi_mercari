@@ -23,10 +23,6 @@ $sp: 480px;  // スマホ
   background-color: #000;
 }
 
-.footer-content{
-  margin-left: 2em;
-}
-
 .global-footer{
   display: flex;
   justify-content: center;
@@ -57,7 +53,8 @@ $sp: 480px;  // スマホ
   }
 }
 
-.footer-cell{
+.footer-info{
+  margin-left: 2em;
   color: #fff;
   font-size: 0.9em;
   a:link { color: #fff; text-decoration: none;}
