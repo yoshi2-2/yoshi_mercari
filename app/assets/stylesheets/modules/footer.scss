@@ -73,3 +73,35 @@ $sp: 480px;  // スマホ
     margin-top: 5px;
   }
 }
+
+.footer-sell-btn{
+  a:link { color: #fff; text-decoration: none;}
+  a:visited { color: #fff;}
+  a:hover { color: #fff;}
+  a:active { color: #fff; }
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 2em;
+  text-align: center;
+  background: #EA352C;
+  height: 170px;
+  width: 170px;
+  border-radius: 50%;
+  line-height: 30px;
+  .sell{
+    font-size: 0.4em;
+    padding-top:30px;
+  }
+  @include tab {
+    height: 100px;
+    width: 100px;
+    bottom: -20px;
+    right: -20px;
+    font-size: 1.1em;
+    line-height: 20px;
+    .sell{
+      font-size: 0.8em;
+    }
+  }
+}
