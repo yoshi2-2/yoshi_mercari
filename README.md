@@ -2,19 +2,9 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|family_name|string|null: false|
-|first_name|string|null: false|
-|family_name_kana|string|null: false|
-|first_name_kana|string|null: false|
-|birth_year|integer|-------|
-|birth_month|integer|-------|
-|birth_day|integer|-------|
 |email|string|null: false, unique: true|
 |password|string|null: false|
-|phone_number|integer|-------|
 |nickname|string|null: false|
-|avatar|string|-------|
-|introduction|text|-------|
 
 ### Association
 - has_many :items
@@ -22,6 +12,25 @@
 - has_many :orders
 - has_one :address
 - has_one :credit_card
+- has_one :users-info
+
+## users-infoテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|family_name|string|null: false|
+|first_name|string|null: false|
+|family_name_kana|string|null: false|
+|first_name_kana|string|null: false|
+|birth_year|integer|-------|
+|birth_month|integer|-------|
+|birth_day|integer|-------|
+|phone_number|integer|-------|
+|avatar|string|-------|
+|introduction|text|-------|
+
+### Association
+- belongs_to :user
 
 ## addressesテーブル
 |Column|Type|Options|
