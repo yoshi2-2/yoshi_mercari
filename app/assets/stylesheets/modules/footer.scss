@@ -1,0 +1,78 @@
+$pc: 1024px; // PC
+$tab: 680px; // タブレット
+$sp: 480px;  // スマホ
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+
+.footer{
+  background-color: #000;
+}
+
+.footer-content{
+  margin-left: 2em;
+}
+
+.global-footer{
+  display: flex;
+  justify-content: center;
+}
+
+.footer-copyright{
+  display: flex;
+  justify-content: center;
+}
+
+.download-app{
+  display: flex;
+  justify-content: center;
+}
+
+
+.download-app{
+  padding-top: 30px;
+  img{
+    height: 40px;
+    float: left;
+  }
+  p{
+    float: left;
+    line-height: 40px;
+    color: #fff;
+    padding-left: 10px;
+  }
+}
+
+.footer-cell{
+  color: #fff;
+  font-size: 0.9em;
+  a:link { color: #fff; text-decoration: none;}
+  a:visited { color: #fff;}
+  a:hover { color: #f0f0f0; text-decoration: underline;}
+  a:active { color: #fff; }
+  h2{
+    font-weight: bold;
+    margin-top: 30px;
+    font-size: 1.2em;
+  }
+  ul{
+    margin-top: 10px;
+  }
+  li{
+    margin-top: 5px;
+  }
+}
