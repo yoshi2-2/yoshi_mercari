@@ -1,0 +1,60 @@
+$pc: 1024px; // PC
+$tab: 680px; // タブレット
+$sp: 480px;  // スマホ
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+.pickup-container--white{
+  width: 70vw;
+  margin:0 auto;
+  padding: 50px 0 20px;
+  @include tab {width: 80vw;display: flex;
+justify-content: center;};
+  @include sp {width: 100vw;};
+}
+
+.pickup-head--white{
+  background-color: #fff;
+  padding: 2em;
+  @include tab {width: 100vw;};
+  .logout-btn{
+    text-align: center;
+    margin: 0 auto;
+    width: 320px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #EA352C;
+    color: #fff;
+  }
+  a:link { color: #fff; text-decoration: none;}
+  a:visited { color: #fff;}
+  a:hover { color: #fff; text-decoration: underline;}
+  a:active { color: #fff; }
+}
+
+.mypage-list{
+  background-color: #fff;
+  position: relative;
+  h2{
+    position: absolute;
+    top: -70px;
+  }
+  li:hover{
+    background-color: #f8f8f8;
+    width: 100%;
+  }
+}

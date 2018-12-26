@@ -1,0 +1,30 @@
+=render partial: '/items/header'
+
+.main
+  .pickup-container--white
+    .pickup-head--white
+      .logout-btn
+        = link_to 'ログアウト' , destroy_user_session_path, method: :delete, class: "header__btn--white"
+  .pickup-container--white
+    .pickup-head--white
+      .mypage-list
+        %ul
+          %li マイページ
+  .pickup-container--white
+    .pickup-head--white
+      .mypage-list
+        %h2 売上・ポイント
+        %ul
+          %li 売上・申し込み申請
+
+  .pickup-container--white
+    .pickup-head--white
+      .mypage-list
+        %h2 設定
+        %ul
+          %li プロフィール
+
+.footer
+  = render partial: "/items/app-banner"
+  = render partial: "/items/footer"
+  = render partial: "/items/footer-sell-btn"

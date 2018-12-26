@@ -41,7 +41,8 @@ $sp: 480px;  // スマホ
 .account-page__inner{
   width: 80vw;
   margin:0 auto;
-  @include tab {width: 100%;};
+  @include tab {width: 100%;display: flex;
+justify-content: center;};
 }
 
 .account-page__header{

@@ -18,6 +18,10 @@ $sp: 480px;  // スマホ
   }
 }
 
+html{
+  overflow-x : hidden;
+}
+
 a:link { color: #0099E8; text-decoration: none;}
 a:visited { color: #0099E8;}
 a:hover { color: #0099E8; text-decoration: underline;}
@@ -49,6 +53,8 @@ a:active { color: #0099E8; }
 .items-box-content{
   text-align: center;
   display: flex;
+  @include sp {width: 80vw;display: block;
+justify-content: center;};
   .items-box{
     padding: 0 10px;
     background-color: #fff;
