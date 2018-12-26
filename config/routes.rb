@@ -3,4 +3,5 @@ Rails.application.routes.draw do
 
   root "items#index"
   get "logout" => "users#logout"
+  get "mypage" => "users#show"
 end

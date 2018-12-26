@@ -67,7 +67,7 @@
         %ul.header-right__list
           - if user_signed_in?
             %li
-              = link_to 'マイページ', "#", class: "header__btn--red"
+              = link_to 'マイページ', "/mypage", class: "header__btn--red"
             %li
               = link_to 'ログアウト' , "/logout", class: "header__btn--white"
             %li
