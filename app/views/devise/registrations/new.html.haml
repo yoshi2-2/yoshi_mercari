@@ -1,32 +1,52 @@
+
 #account-page.account-page
   .account-page__inner.clearfix
     .account-page__inner--left.account-page__header
-      %h2 Create Account
-      %h5 新規アカウントの作成
-      = render "devise/shared/links"
+      %h1.logo
+        = link_to root_path do
+          = image_tag("logo.svg", width: "90", alt: "mercari")
+      .header-title.clearfix
+        %h2 新規アカウントの作成
+        = render "devise/shared/links"
     .account-page__inner--right.user-form
       = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
         = devise_error_messages!
+        .field-title
+          会員情報入力
         .field
           .field-label
-            = f.label :nickname
+            = f.label :ニックネーム
           .field-input
-            = f.text_field :nickname, autofocus: true
+            = f.text_field :nickname, autofocus: true, placeholder: "例）メルカリ太郎"
         .field
           .field-label
-            = f.label :email
+            = f.label :メールアドレス
+            %i 必須
           .field-input
-            = f.email_field :email
+            = f.email_field :email, placeholder: "PC・携帯どちらでも可"
         .field
           .field-label
-            = f.label :password
-            %i (英数字6文字以上)
+            = f.label :パスワード
+            %i 必須
           .field-input
-            = f.password_field :password, autocomplete: "off"
+            = f.password_field :password, autocomplete: "off", placeholder: "英数字6文字以上"
         .field
           .field-label
-            = f.label :password_confirmation
+            = f.label :パスワード（確認）
           .field-input
-            = f.password_field :password_confirmation, autocomplete: "off"
+            = f.password_field :password_confirmation, autocomplete: "off", placeholder: "英数字6文字以上"
         .actions
-          = f.submit "Create Account", class: 'btn'
+          = f.submit "登録する", class: 'btn'
+    .account-page__footer
+      .footer-link
+        = link_to ' プライバシーポリシー' ,"#"\
+        = link_to 'メルカリ利用規約' ,"#"\
+        = link_to '特定商取引に関する表記' ,"#"
+      .global-footer
+        %nav
+
+        = link_to do
+          = image_tag "logo-white.svg", class: "footer-logo"
+      .footer-copyright
+        %small © 2018 Mercari
+

@@ -1,0 +1,101 @@
+$pc: 1024px; // PC
+$tab: 680px; // タブレット
+$sp: 480px;  // スマホ
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+.account-page__footer{
+  a:link { color: #000; text-decoration: none;}
+  a:visited { color: #000;}
+  a:hover { color: #000; text-decoration: underline;}
+  a:active { color: #000; }
+  a{
+    padding-right: 0.5em;
+  }
+  text-align: center;
+}
+
+.account-page{
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.account-page{
+  width: 100vw;
+}
+
+.account-page__inner{
+  width: 80vw;
+  margin:0 auto;
+  @include tab {width: 100%;};
+}
+
+.account-page__header{
+  height: 128px;
+  text-align: center;
+  .logo{
+    margin-left: 38%;
+    img{
+      margin-top: 20px;
+      height: 33px;
+      width: 120px;
+    }
+  }
+}
+
+.user-form{
+  background-color: #fff;
+  @include tab {width: 100vw;};
+  .field-title{
+    font-weight: bold;
+    font-size: 1.2em;
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+  }
+  .field-label{
+    margin: 2em 0 0.4em 0;
+    font-weight: bold;
+    margin-left: 20vw;
+    @include tab {margin-left: 20vw;};
+  }
+  .field-input{
+    margin-left: 20vw;
+    @include tab {margin-left: 20vw;};
+  }
+  .actions{
+    margin-bottom: 2em;
+    text-align: center;
+  }
+  input{
+    width: 40vw;
+    height: 40px;
+    @include tab {width: 75%;};
+  }
+  .btn{
+    margin: 2em;
+    width: 320px;
+    height: 50px;
+    background-color: #EA352C;
+    color: #fff;
+  }
+}
+
+
+.account-page__footer{
+  background-color: #f5f5f5;
+}

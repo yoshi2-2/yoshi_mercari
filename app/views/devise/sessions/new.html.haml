@@ -19,3 +19,15 @@
               = f.password_field :password, autocomplete: "off"
           .actions
             = f.submit "Log in", class: 'btn'
+    .account-page__footer
+      .footer-link
+        = link_to ' プライバシーポリシー' ,"#"\
+        = link_to 'メルカリ利用規約' ,"#"\
+        = link_to '特定商取引に関する表記' ,"#"
+      .global-footer
+        %nav
+
+        = link_to do
+          = image_tag "logo-white.svg", class: "footer-logo"
+      .footer-copyright
+        %small © 2018 Mercari
