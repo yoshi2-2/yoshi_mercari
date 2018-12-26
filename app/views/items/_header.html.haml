@@ -69,7 +69,7 @@
             %li
               = link_to 'マイページ', "#", class: "header__btn--red"
             %li
-              = link_to 'お知らせ' , "#", class: "header__btn--white"
+              = link_to 'ログアウト' , destroy_user_session_path, method: :delete, class: "header__btn--white"
             %li
               = link_to 'やることリスト', "#", class: "header__btn--white"
           - else
