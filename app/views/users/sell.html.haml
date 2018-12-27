@@ -1,1 +1,68 @@
-sellページ
+.main
+  .center-inner.pc-80w
+    .center-content
+      = link_to root_path do
+        = image_tag("logo.svg", alt: "mercari")
+
+    .content-white
+      .center-title
+        商品の情報を入力
+    .content-white
+      .content-white-inner
+        .inner-title-left
+          出品画像
+        %p 最大4枚までアップロードできます
+      .content-white-inner
+        .inner-title-left
+          商品名
+        %input.bottom-margin2.width-90
+        .inner-title-left
+          商品の説明
+        %input.bottom-margin2.width-90
+      .content-white-inner
+        .inner-title-left.font-gray.top-bottom-padding2
+          商品の詳細
+        .inner-title-left
+          カテゴリー
+        %input.bottom-margin2.width-90
+        .inner-title-left
+          商品の状態
+        %input.bottom-margin2.width-90
+      .content-white-inner
+        .inner-title-left.font-gray.top-bottom-padding2
+          配送について
+        .inner-title-left
+          配送量の負担
+        %input.bottom-margin2.width-90
+        .inner-title-left
+          発送元の地域
+        %input.bottom-margin2.width-90
+        .inner-title-left
+          発送までの日数
+        %input.bottom-margin2.width-90
+      .content-white-inner
+        .inner-title-left.font-gray.top-bottom-padding2
+          販売価格(300〜9,999,999)
+        .inner-title-right
+          価格
+        %input.form-right.bottom-margin2.width-40
+        .inner-title-left.border-top-bottom
+          販売手数料 (10%)
+        .inner-title-left
+          販売利益
+      .content-white-inner
+        禁止されている出品、行為を必ずご確認ください。
+        またブランド品でシリアルナンバー等がある場合はご記載ください。偽ブランドの販売は犯罪であり処罰される可能性があります。
+        また、出品をもちまして加盟店規約に同意したことになります。
+        .user-form
+          .red-btn
+            出品する
+          .gray-btn
+            もどる
+    .global-footer
+      %nav
+
+      = link_to do
+        = image_tag "logo-white.svg", class: "footer-logo"
+    .footer-copyright
+      %small © 2018 Mercari
