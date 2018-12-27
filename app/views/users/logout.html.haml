@@ -1,6 +1,6 @@
 =render partial: '/items/header'
 
-.main
+.main.black-link
   .pickup-container--white
     .pickup-head--white
       .logout-btn
@@ -22,7 +22,8 @@
       .mypage-list
         %h2 設定
         %ul
-          %li プロフィール
+          %li
+            = link_to "プロフィール", "/mypage/profile/#{current_user.id}"
 
 .footer
   = render partial: "/items/app-banner"
