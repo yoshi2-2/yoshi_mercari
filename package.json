@@ -1,5 +1,8 @@
 {
   "name": "test_mercari",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "uikit": "^3.0.0-rc.25"
+  }
 }

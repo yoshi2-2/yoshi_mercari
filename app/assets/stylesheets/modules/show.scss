@@ -1,0 +1,18 @@
+.pickup-head__img{
+  background-image: url(/assets/mypageback.png);
+  border: 1px solid #CCC;
+  width: 100vw;
+  height: 155px;
+  background-size: 100% auto;
+  vertical-align: middle;
+  display:table-cell;
+  input{
+    margin-left: 10px;
+  }
+}
+
+.my-avatar__image{
+  height: 50px;
+  vertical-align:middle;
+  border-radius: 50%;
+}

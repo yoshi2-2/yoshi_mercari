@@ -5,8 +5,8 @@
         = image_tag "mercari_icon.png", class: "footer-app-icon"
         %p 今すぐ無料ダウンロード！
   .footer-info
-    %ul
-      %li.footer-cell
+    .uk-container.uk-container-center.uk-grid
+      .footer-cell
         %h2.footer-head メルカリについて
         %ul
           %li
@@ -31,7 +31,7 @@
             = link_to "法令順守と犯罪抑止のために" ,"/"
           %li
             = link_to "採用情報" ,"/"
-      %li.footer-cell
+      .footer-cell
         %h2.footer-head メルカリを見る
         %ul
           %li
@@ -46,7 +46,7 @@
             = link_to "公式Twitter" ,"/"
           %li
             = link_to "公式Facebook" ,"/"
-      %li.footer-cell
+      .footer-cell
         %h2.footer-head ヘルプ&ガイド
         %ul
           %li

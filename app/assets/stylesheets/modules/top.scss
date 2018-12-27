@@ -27,6 +27,13 @@ a:visited { color: #0099E8;}
 a:hover { color: #0099E8; text-decoration: underline;}
 a:active { color: #0099E8; }
 
+.black-link{
+  a:link { color: #000; text-decoration: none;}
+  a:visited { color: #000;}
+  a:hover { color: #000; text-decoration: underline;}
+  a:active { color: #000; }
+}
+
 .main{
   background-color: #F5F5F5;
 }
