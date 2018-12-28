@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   get "logout" => "users#logout"
   get "mypage" => "users#show"
   get "/mypage/profile/:id" => "users#profile"
-  get "/user/:id/sell" => "users#sell"
+  get "/user/:id/sell" => "items#sell"
 end
